@@ -50,7 +50,7 @@ def askUserToGuess( times, secreteNumber ):
 # it has two parameters:
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
-def evaluateAnswer( userGuess, userSecretNumber ):
+def evaluateAnswer( userGuess, userSecreteNumber ):
     
     if userGuess < userSecreteNumber:
         print('Your guess is too low.')
