@@ -29,14 +29,14 @@ def generateNumber(topLimit):
 # the function returns one of two values:
 #   return True if the user guessed the answer correctly
 #   return False if the user did not guess the answer correctly
-def askUserToGuess( times, secretNumber ):
+def askUserToGuess( times, secreteNumber ):
 
     # this loop cycles through all the user guesses
     for guessesTaken in range(1, times+1):
         print('Take your guess #' + str(guessesTaken) + ': ')
         guess = int(input())
 
-        if evaluateAnswer( guess, secretNumber ) == True:
+        if evaluateAnswer( guess, secreteNumber ) == True:
             return True
         
         
@@ -52,10 +52,10 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
     
-    if userGuess < userSecretNumber:
+    if userGuess < userSecreteNumber:
         print('Your guess is too low.')
         return False
-    elif userGuess > userSecretNumber:
+    elif userGuess > userSecreteNumber:
         print('Your guess is too high.')
         return False
     
