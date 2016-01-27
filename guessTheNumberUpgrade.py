@@ -4,6 +4,7 @@ import random
 def generateNumber(topLimit):
    return random.randint(1,topLimit)
 
+
 # -------------------------------------------------------------------
 # this is the generateNumber function
 # it has one parameter:
