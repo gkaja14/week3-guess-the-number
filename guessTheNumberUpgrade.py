@@ -1,7 +1,7 @@
 # Kaja.
 import random
 
-def generatNumber(topLimit):
+def generateNumber(topLimit):
    return random.randint(1,topLimit)
 
 # -------------------------------------------------------------------
