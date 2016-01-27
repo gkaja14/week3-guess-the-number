@@ -1,23 +1,14 @@
 # Kaja.
 import random
 
+def generatNumber(topLimit):
+   return random.randint(1,topLimit)
+
 # -------------------------------------------------------------------
 # this is the generateNumber function
 # it has one parameter:
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
-def generateNumber( topLimit ):
-    if topLimit==1:
-        return'it is certain'
-    elif topLimit==2:
-        return'it is decidedly so'
-    elif topLimit==3:
-        return 'yes'
-    elif return'ask again later'
-
-l=random.randint(1, 3)
-limit=generateNumber(l)
-print(limit)
 
 
     
@@ -46,10 +37,7 @@ def askUserToGuess( times, secretNumber ):
 
         if evaluateAnswer( guess, secretNumber ) == True:
             return True
-        elif evaluateAnswer( guess, secretNumber) == False:
-            return False
-        else:
-            break
+        
         
         
     return False
@@ -63,6 +51,15 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
     
+    if userGuess < userSecretNumber:
+        print('Your guess is too low.')
+        return False
+    elif userGuess > userSecretNumber:
+        print('Your guess is too high.')
+        return False
+    
+    else:
+        return True
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -84,20 +81,8 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #   'showAnswer' is a Boolean value, if that Boolean value is:
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
-import random
-def playGame( showAnswer ):
-print('Hello World')           
-print('Choose the upper limit of the random number')
-      upperLimit=input()
-print('choose a total number of guesses')
-      totalGuesses=input()
-theNumber=random.randint(1, upperLimit+1)
-for upperLimit in range (1, 7):
-      print( 'take a guess between 1 and + 'str(upperLimit)+ ', and you have 6 guesses in total')
-      guess=input()
-      if guess == showAnswer
-      print(
-      
+def playGame( ShowAnswer ):
+          
       
     
     # TO DO: ####################################################
@@ -116,7 +101,15 @@ for upperLimit in range (1, 7):
     # 5. Tell the user to guess a number between 1 and the      #
     #    upper limits, and tell the user how many guesses they  #
     #    have in total                                          #
-    #############################################################
+    #############################################################   
+    print('Welcom to guessingGame')
+    print('Choose the upper limit of the random number generator')
+    upperLimit=int(input())
+    print('Choose a total number of guesses')
+    totalGuesses=int(input())
+    theNumber=generatNumber(upperLimit)
+    print('Choose a number between 1 and '+str(upperLimit)+' guesses='+str(totalGuesses))
+    
 
 
     # you don't need to change anything below this comment ##############
@@ -131,3 +124,4 @@ for upperLimit in range (1, 7):
     else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
 # end of playGame function -----------------------------------------
+playGame(True)
