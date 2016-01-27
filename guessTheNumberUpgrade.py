@@ -1,4 +1,4 @@
-# replace the contents of this comment with your name
+# Kaja.
 import random
 
 # -------------------------------------------------------------------
@@ -7,6 +7,19 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
+    if topLimit==1:
+        return'it is certain'
+    elif topLimit==2:
+        return'it is decidedly so'
+    elif topLimit==3:
+        return 'yes'
+    elif return'ask again later'
+
+l=random.randint(1, 3)
+limit=generateNumber(l)
+print(limit)
+
+
     
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
@@ -33,6 +46,11 @@ def askUserToGuess( times, secretNumber ):
 
         if evaluateAnswer( guess, secretNumber ) == True:
             return True
+        elif evaluateAnswer( guess, secretNumber) == False:
+            return False
+        else:
+            break
+        
         
     return False
 # end of askUserToGuess function ----------------------------------
@@ -44,6 +62,7 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
+    
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -65,7 +84,21 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #   'showAnswer' is a Boolean value, if that Boolean value is:
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
+import random
 def playGame( showAnswer ):
+print('Hello World')           
+print('Choose the upper limit of the random number')
+      upperLimit=input()
+print('choose a total number of guesses')
+      totalGuesses=input()
+theNumber=random.randint(1, upperLimit+1)
+for upperLimit in range (1, 7):
+      print( 'take a guess between 1 and + 'str(upperLimit)+ ', and you have 6 guesses in total')
+      guess=input()
+      if guess == showAnswer
+      print(
+      
+      
     
     # TO DO: ####################################################
     # Write code in this function that                          #
