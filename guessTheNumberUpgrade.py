@@ -2,7 +2,7 @@
 import random
 
 def generateNumber(topLimit):
-   return random.randint(1,topLimit)
+   generateNumber=random.randint(1,topLimit)
 
 
 # -------------------------------------------------------------------
