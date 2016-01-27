@@ -2,7 +2,7 @@
 import random
 
 def generateNumber(topLimit):
-   generateNumber=random.randint(1,topLimit)
+   return random.randint(1,topLimit)
 
 
 # -------------------------------------------------------------------
@@ -108,7 +108,7 @@ def playGame( ShowAnswer ):
     upperLimit=int(input())
     print('Choose a total number of guesses')
     totalGuesses=int(input())
-    theNumber=generatNumber(upperLimit)
+    theNumber=generateNumber(upperLimit)
     print('Choose a number between 1 and '+str(upperLimit)+' guesses='+str(totalGuesses))
     
 
