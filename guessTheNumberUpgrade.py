@@ -1,5 +1,7 @@
 # Kaja.
+
 import random
+
 
 def generateNumber(topLimit):
    return random.randint(1,topLimit)
@@ -29,6 +31,7 @@ def generateNumber(topLimit):
 # the function returns one of two values:
 #   return True if the user guessed the answer correctly
 #   return False if the user did not guess the answer correctly
+
 def askUserToGuess( times, secreteNumber ):
 
     # this loop cycles through all the user guesses
@@ -110,8 +113,11 @@ def playGame( ShowAnswer ):
     totalGuesses=int(input())
     theNumber=generateNumber(upperLimit)
     print('Choose a number between 1 and '+str(upperLimit)+' guesses='+str(totalGuesses))
-    
 
+
+# this line runs your program
+# using the True parameter should show the random number on the screen
+# using the False parameter hides the random number from the user
 
     # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
@@ -125,4 +131,4 @@ def playGame( ShowAnswer ):
     else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
 # end of playGame function -----------------------------------------
-playGame(True)
+
